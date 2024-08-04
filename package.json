@@ -3,7 +3,7 @@
   "description": "Aplicação de agendamento para corte de cabelo",
   "author": "Lázaro Pimentel",
   "scripts": {
-    "server": "json-server --watch server.json",
+    "server": "json-server --watch server.json --port 3000",
     "build": "webpack",
     "dev": "webpack server"
   },
