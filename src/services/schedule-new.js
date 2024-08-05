@@ -30,3 +30,16 @@ export async function scheduleFetchByDay({date}) {
         alert("Não foi possível buscar. Tente novamente mais tarde.");
     }
 }
+
+export async function scheduleCancel({id}) {
+
+    try {
+        await  fetch(`${apiConfig.baseURL}/schedules/${id}`, {
+            method: "DELETE"
+        })
+        alert("Agendamento cancelado com sucesso!");
+    } catch (error) {
+        alert("Não foi possível cancelar o agendamento.")
+    }
+
+}
